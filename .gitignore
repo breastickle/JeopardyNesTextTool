@@ -364,6 +364,8 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
+# JSON - extractedScripts
+ExtractedScript*.json
 
 ## CMake
 /out
