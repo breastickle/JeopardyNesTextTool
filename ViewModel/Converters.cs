@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
+using System.Windows.Media;
 
 namespace JeopardyNesTextTool.ViewModel
 {
@@ -33,6 +34,30 @@ namespace JeopardyNesTextTool.ViewModel
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();
+        }
+    }
+
+    public class BudgetStateToBrushConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is BudgetState state)
+            {
+                return state switch
+                {
+                    BudgetState.Green => Brushes.LimeGreen,
+                    BudgetState.Yellow => Brushes.Gold,
+                    BudgetState.Orange => Brushes.DarkOrange,
+                    BudgetState.Red => Brushes.Crimson,
+                    _ => Brushes.Gray
+                };
+            }
+            return Brushes.Gray;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotSupportedException();
         }
     }
 }

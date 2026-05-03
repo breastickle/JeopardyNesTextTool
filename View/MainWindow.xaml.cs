@@ -1,4 +1,5 @@
-﻿using System.Windows;
+using System.Windows;
+using System.Windows.Controls;
 using JeopardyNesTextTool.ViewModel;
 
 namespace JeopardyNesTextTool
@@ -13,6 +14,14 @@ namespace JeopardyNesTextTool
             InitializeComponent();
             var viewModel = new ApplicationViewModel();
             DataContext = viewModel;
+        }
+
+        private void OnTextBoxChanged(object sender, TextChangedEventArgs e)
+        {
+            if (DataContext is ApplicationViewModel viewModel)
+            {
+                viewModel.NotifyTextChanged();
+            }
         }
     }
 }
