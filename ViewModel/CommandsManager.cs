@@ -87,7 +87,7 @@ public class CommandsManager
             var configGroup = configGroupTuple.value;
             var newViewModelGroup = new ViewModelGroup()
             {
-                Name = $"Group {groupNumber} ({configGroup.Pointers.Length} blocks, 0x{configGroup.InsertRange.Size:X} bytes)",
+                Name = $"Group {groupNumber} ({configGroup.Pointers.Length} blocks, {configGroup.InsertRange.Size:N0} bytes)",
                 ConfigGroup = configGroup,
                 ModelObject = configGroup,
                 ViewModelBlocks = new ObservableCollection<ViewModelBlock>()

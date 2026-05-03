@@ -21,7 +21,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="220" />
+            <ColumnDefinition Width="280" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
@@ -129,27 +129,27 @@
                         <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="120"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Expected:" Margin="0,2"/>
-                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding ExpectedBytes, StringFormat={}0x{0:X}}" Margin="0,2"/>
-                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Actual:" Margin="0,2"/>
-                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding ActualBytes, StringFormat={}0x{0:X}}" Margin="0,2"/>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Maximum Size:" Margin="0,2"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding ExpectedBytes, StringFormat={}{0:N0} bytes (0x{0:X})}" Margin="0,2"/>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Actual Size:" Margin="0,2"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding ActualBytes, StringFormat={}{0:N0} bytes (0x{0:X})}" Margin="0,2"/>
                             <TextBlock Grid.Row="2" Grid.Column="0" Text="Slack:" Margin="0,2"/>
-                            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding SlackBytes}" Margin="0,2"/>
-                            <TextBlock Grid.Row="3" Grid.Column="0" Text="State:" Margin="0,2"/>
-                            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" Margin="0,2">
+                            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="0,2">
                                 <Ellipse Width="12" Height="12" Margin="0,0,5,0"
                                          Fill="{Binding BudgetState, Converter={StaticResource BudgetStateToBrushConverter}}"
                                          VerticalAlignment="Center"/>
                                 <TextBlock Text="{Binding BudgetState}" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding UsedPercent, StringFormat={} ({0}%)}" VerticalAlignment="Center"/>
+                                <TextBlock Text=", " VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding SlackBytes, StringFormat={}{0:N0} bytes}" VerticalAlignment="Center"/>
                             </StackPanel>
                         </Grid>
                         <TextBlock Text="Per-block contribution" Margin="0,15,0,5" FontWeight="Bold"/>
@@ -158,11 +158,13 @@
                                 <DataTemplate>
                                     <Grid Margin="0,1">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="80"/>
+                                            <ColumnDefinition Width="110"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Grid.Column="0" Text="{Binding Name}"/>
-                                        <TextBlock Grid.Column="1" Text="{Binding ActualBytes, StringFormat={}0x{0:X}}"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding ActualBytes, StringFormat={}{0:N0} bytes}" HorizontalAlignment="Right" Margin="0,0,15,0"/>
+                                        <TextBlock Grid.Column="2" Text="{Binding ActualBytes, StringFormat={}0x{0:X}}"/>
                                     </Grid>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>

@@ -129,11 +129,14 @@ namespace JeopardyNesTextTool.ViewModel
                 _actualBytes = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(SlackBytes));
+                OnPropertyChanged(nameof(UsedPercent));
                 OnPropertyChanged(nameof(BudgetState));
             }
         }
 
         public int SlackBytes => (int)ExpectedBytes - (int)ActualBytes;
+
+        public int UsedPercent => ExpectedBytes == 0 ? 0 : (int)Math.Round((double)ActualBytes / ExpectedBytes * 100);
 
         public BudgetState BudgetState
         {
