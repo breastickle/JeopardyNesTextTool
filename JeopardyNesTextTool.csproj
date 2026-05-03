@@ -132,6 +132,7 @@
     <Compile Include="Model\BinaryHelpers\BinaryWriter.cs" />
     <Compile Include="Model\Config.cs" />
     <Compile Include="Model\HuffmanTree.cs" />
+    <Compile Include="Model\GroupSizeCalculator.cs" />
     <Compile Include="Model\PlainTextBlock.cs" />
     <Compile Include="Model\StructuredTextBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

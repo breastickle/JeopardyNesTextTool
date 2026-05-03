@@ -79,18 +79,34 @@ public class CommandsManager
         _applicationViewModel.ScriptFilePath = openFileDialog.FileName;
         var jsonReader = new BinaryReader(_applicationViewModel.ScriptFilePath);
         _applicationViewModel.ModelBlocks = jsonReader.JsonDeserialize();
-        _applicationViewModel.ViewModelBlocks.Clear();
-        foreach (var modelBlockTuple in _applicationViewModel.ModelBlocks.Select((value, i) => (value, i)))
+        _applicationViewModel.ViewModelGroups.Clear();
+        var blockIndex = 0;
+        foreach (var configGroupTuple in _applicationViewModel.ViewModelConfig.Groups.Select((value, i) => (value, i)))
         {
-            var blockNumber = modelBlockTuple.i + 1;
-            var newViewModelBlock = new ViewModelBlock()
+            var groupNumber = configGroupTuple.i + 1;
+            var configGroup = configGroupTuple.value;
+            var newViewModelGroup = new ViewModelGroup()
             {
-                Name = $"Block {blockNumber}",
-                ModelObject = modelBlockTuple.value,
-                ViewModelTopics = GetViewModelTopics(modelBlockTuple.value, blockNumber)
+                Name = $"Group {groupNumber} ({configGroup.Pointers.Length} blocks, {configGroup.InsertRange.Size:N0} bytes)",
+                ConfigGroup = configGroup,
+                ModelObject = configGroup,
+                ViewModelBlocks = new ObservableCollection<ViewModelBlock>()
             };
-            _applicationViewModel.ViewModelBlocks.Add(newViewModelBlock);
+            for (var i = 0; i < configGroup.Pointers.Length && blockIndex < _applicationViewModel.ModelBlocks.Count; i++, blockIndex++)
+            {
+                var modelBlock = _applicationViewModel.ModelBlocks[blockIndex];
+                var blockNumber = blockIndex + 1;
+                var newViewModelBlock = new ViewModelBlock()
+                {
+                    Name = $"Block {blockNumber}",
+                    ModelObject = modelBlock,
+                    ViewModelTopics = GetViewModelTopics(modelBlock, blockNumber)
+                };
+                newViewModelGroup.ViewModelBlocks.Add(newViewModelBlock);
+            }
+            _applicationViewModel.ViewModelGroups.Add(newViewModelGroup);
         }
+        GroupSizeCalculator.Recalculate(_applicationViewModel);
     }
 
     private static ObservableCollection<ViewModelTopic> GetViewModelTopics(StructuredTextBlock modelBlock, int blockNumber)
