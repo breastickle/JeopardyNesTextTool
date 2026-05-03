@@ -3,6 +3,7 @@ JeopardyNesTextTool
 
 Huffman compression tool and text editor for NES "Jeopardy! 25th Anniversary Edition" game and it's hacks.
 ![screenshot](JeopardyNesTextTool.png)
+![screenshot](JeopardyNesTextTool2.png)
 
 Features
 -----
