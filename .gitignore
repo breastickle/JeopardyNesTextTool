@@ -367,6 +367,13 @@ FodyWeavers.xsd
 # JSON - extractedScripts
 ExtractedScript*.json
 
+# Release artifacts (build outputs and packaged distributables)
+release-stage/
+*.zip
+
+# NES ROMs (copyrighted; should never be tracked)
+*.nes
+
 ## CMake
 /out
-CMakeSettings.json 
+CMakeSettings.json
