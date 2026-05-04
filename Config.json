@@ -1,0 +1,215 @@
+{
+  "DestinationRomPath": "",
+  "JsonGroups": [
+    {
+      "InsertRange": {
+        "StartOffset": "0xA047",
+        "Size": "0x4C50"
+      },
+      "Pointers": [
+        {
+          "QuestionsPointerOffset": "0xA007",
+          "AnswersPointerOffset": "0xA017",
+          "ProformsPointerOffset": "0xA027",
+          "TopicsPointerOffset": "0xA037"
+        },
+        {
+          "QuestionsPointerOffset": "0xA009",
+          "AnswersPointerOffset": "0xA019",
+          "ProformsPointerOffset": "0xA029",
+          "TopicsPointerOffset": "0xA039"
+        },
+        {
+          "QuestionsPointerOffset": "0xA00B",
+          "AnswersPointerOffset": "0xA01B",
+          "ProformsPointerOffset": "0xA02B",
+          "TopicsPointerOffset": "0xA03B"
+        },
+        {
+          "QuestionsPointerOffset": "0xA00D",
+          "AnswersPointerOffset": "0xA01D",
+          "ProformsPointerOffset": "0xA02D",
+          "TopicsPointerOffset": "0xA03D"
+        },
+        {
+          "QuestionsPointerOffset": "0xA00F",
+          "AnswersPointerOffset": "0xA01F",
+          "ProformsPointerOffset": "0xA02F",
+          "TopicsPointerOffset": "0xA03F"
+        },
+        {
+          "QuestionsPointerOffset": "0xA011",
+          "AnswersPointerOffset": "0xA021",
+          "ProformsPointerOffset": "0xA031",
+          "TopicsPointerOffset": "0xA041"
+        },
+        {
+          "QuestionsPointerOffset": "0xA013",
+          "AnswersPointerOffset": "0xA023",
+          "ProformsPointerOffset": "0xA033",
+          "TopicsPointerOffset": "0xA043"
+        }
+      ],
+      "PointersBaseOffset": "0x10"
+    },
+    {
+      "InsertRange": {
+        "StartOffset": "0xF38A",
+        "Size": "0xB26"
+      },
+      "Pointers": [
+        {
+          "QuestionsPointerOffset": "0xA015",
+          "AnswersPointerOffset": "0xA025",
+          "ProformsPointerOffset": "0xA035",
+          "TopicsPointerOffset": "0xA045"
+        }
+      ],
+      "PointersBaseOffset": "0x10"
+    },
+    {
+      "InsertRange": {
+        "StartOffset": "0x10211",
+        "Size": "0x7C76"
+      },
+      "Pointers": [
+        {
+          "QuestionsPointerOffset": "0x101B9",
+          "AnswersPointerOffset": "0x101CF",
+          "ProformsPointerOffset": "0x101E5",
+          "TopicsPointerOffset": "0x101FB"
+        },
+        {
+          "QuestionsPointerOffset": "0x101BB",
+          "AnswersPointerOffset": "0x101D1",
+          "ProformsPointerOffset": "0x101E7",
+          "TopicsPointerOffset": "0x101FD"
+        },
+        {
+          "QuestionsPointerOffset": "0x101BD",
+          "AnswersPointerOffset": "0x101D3",
+          "ProformsPointerOffset": "0x101E9",
+          "TopicsPointerOffset": "0x101FF"
+        },
+        {
+          "QuestionsPointerOffset": "0x101BF",
+          "AnswersPointerOffset": "0x101D5",
+          "ProformsPointerOffset": "0x101EB",
+          "TopicsPointerOffset": "0x10201"
+        },
+        {
+          "QuestionsPointerOffset": "0x101C1",
+          "AnswersPointerOffset": "0x101D7",
+          "ProformsPointerOffset": "0x101ED",
+          "TopicsPointerOffset": "0x10203"
+        },
+        {
+          "QuestionsPointerOffset": "0x101C3",
+          "AnswersPointerOffset": "0x101D9",
+          "ProformsPointerOffset": "0x101EF",
+          "TopicsPointerOffset": "0x10205"
+        },
+        {
+          "QuestionsPointerOffset": "0x101C5",
+          "AnswersPointerOffset": "0x101DB",
+          "ProformsPointerOffset": "0x101F1",
+          "TopicsPointerOffset": "0x10207"
+        },
+        {
+          "QuestionsPointerOffset": "0x101C7",
+          "AnswersPointerOffset": "0x101DD",
+          "ProformsPointerOffset": "0x101F3",
+          "TopicsPointerOffset": "0x10209"
+        },
+        {
+          "QuestionsPointerOffset": "0x101C9",
+          "AnswersPointerOffset": "0x101DF",
+          "ProformsPointerOffset": "0x101F5",
+          "TopicsPointerOffset": "0x1020B"
+        },
+        {
+          "QuestionsPointerOffset": "0x101CB",
+          "AnswersPointerOffset": "0x101E1",
+          "ProformsPointerOffset": "0x101F7",
+          "TopicsPointerOffset": "0x1020D"
+        },
+        {
+          "QuestionsPointerOffset": "0x101CD",
+          "AnswersPointerOffset": "0x101E3",
+          "ProformsPointerOffset": "0x101F9",
+          "TopicsPointerOffset": "0x1020F"
+        }
+      ],
+      "PointersBaseOffset": "0x8010"
+    },
+    {
+      "InsertRange": {
+        "StartOffset": "0x1908C",
+        "Size": "0x6E09"
+      },
+      "Pointers": [
+        {
+          "QuestionsPointerOffset": "0x1903C",
+          "AnswersPointerOffset": "0x19050",
+          "ProformsPointerOffset": "0x19064",
+          "TopicsPointerOffset": "0x19078"
+        },
+        {
+          "QuestionsPointerOffset": "0x1903E",
+          "AnswersPointerOffset": "0x19052",
+          "ProformsPointerOffset": "0x19066",
+          "TopicsPointerOffset": "0x1907A"
+        },
+        {
+          "QuestionsPointerOffset": "0x19040",
+          "AnswersPointerOffset": "0x19054",
+          "ProformsPointerOffset": "0x19068",
+          "TopicsPointerOffset": "0x1907C"
+        },
+        {
+          "QuestionsPointerOffset": "0x19042",
+          "AnswersPointerOffset": "0x19056",
+          "ProformsPointerOffset": "0x1906A",
+          "TopicsPointerOffset": "0x1907E"
+        },
+        {
+          "QuestionsPointerOffset": "0x19044",
+          "AnswersPointerOffset": "0x19058",
+          "ProformsPointerOffset": "0x1906C",
+          "TopicsPointerOffset": "0x19080"
+        },
+        {
+          "QuestionsPointerOffset": "0x19046",
+          "AnswersPointerOffset": "0x1905A",
+          "ProformsPointerOffset": "0x1906E",
+          "TopicsPointerOffset": "0x19082"
+        },
+        {
+          "QuestionsPointerOffset": "0x19048",
+          "AnswersPointerOffset": "0x1905C",
+          "ProformsPointerOffset": "0x19070",
+          "TopicsPointerOffset": "0x19084"
+        },
+        {
+          "QuestionsPointerOffset": "0x1904A",
+          "AnswersPointerOffset": "0x1905E",
+          "ProformsPointerOffset": "0x19072",
+          "TopicsPointerOffset": "0x19086"
+        },
+        {
+          "QuestionsPointerOffset": "0x1904C",
+          "AnswersPointerOffset": "0x19060",
+          "ProformsPointerOffset": "0x19074",
+          "TopicsPointerOffset": "0x19088"
+        },
+        {
+          "QuestionsPointerOffset": "0x1904E",
+          "AnswersPointerOffset": "0x19062",
+          "ProformsPointerOffset": "0x19076",
+          "TopicsPointerOffset": "0x1908A"
+        }
+      ],
+      "PointersBaseOffset": "0x10010"
+    }
+  ]
+}
