@@ -12,6 +12,18 @@ Features
 - Possible script editing in JSON format
 - WPF application with the MVVM design pattern can be used for as base for other script editors development
 
+The block tree view is now organized into Groups, mirroring the structure of Config.json. Selecting a group shows a live capacity panel:
+
+Maximum Size — bytes available in the group's InsertRange
+Actual Size — bytes the current script will encode to (recomputed live as you edit)
+Slack — remaining headroom, with a color-coded state indicator:
+Green: under 90% used
+Yellow: 90 – 99% used
+Orange: 99 – 100% used
+Red: over budget
+Per-block contribution — bytes each block contributes to the group total, in both decimal and hex
+Decimal byte counts use thousand separators for readability; hex is preserved in parentheses for ROM-hacker workflows.
+
 Usage
 -------
 First of all, you need to prepare the NES ROM from which you will extract the game script. For example, Jeopardy! 25th Anniversary Edition (U).nes. By clicking on the extract script button, the ExtractedScript.json file will appear in the application folder. It is most convenient to load this file into the program for further editing (using the Open file button). But you can edit in json format, if that’s convenient for you.  
